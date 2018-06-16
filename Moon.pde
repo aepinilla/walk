@@ -23,6 +23,10 @@ class Moon {
 
     on = true;
   }
+  
+  void remove() {
+    on = false;
+  }
 
   void ascend() {
     if (on == true) {
@@ -39,10 +43,10 @@ class Moon {
 
   void top() {
     if (y < 0 - diameter) {
-      y = height;
+      y = random(height);
 
       if (x < 0 - diameter) {
-        x = width;
+        x = random(width);
       }
     }
   }

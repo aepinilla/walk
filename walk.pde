@@ -34,3 +34,15 @@ void mousePressed() {
     currentMoon = 0;
   }
 }
+
+void keyPressed() {
+  if (key == 32) {
+    if (currentMoon != 0) {
+      currentMoon--;
+      moons[currentMoon].remove();
+      println(currentMoon);
+    } else {
+      currentMoon = moons.length;
+    }
+  }
+}

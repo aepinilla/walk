@@ -6,30 +6,35 @@ class Moon {
 
   float diameter;
   float speed;
-  
-  color col;
 
-  Moon(float tempD, float tempS, color tempCol) {
+  boolean on = false;
+
+  Moon(float tempD, float tempS) {
     moon = loadImage("moon.png");
     x = random(width);
     y = height;
     diameter = tempD;
     speed = tempS;
-    
-    col = tempCol;
+  }
+
+  void start(float xpos, float ypos) {
+    x = xpos;
+    y = ypos;
+
+    on = true;
   }
 
   void ascend() {
-    y = y - speed;
-    x = x - 1;
+    if (on == true) {
+      y = y - speed;
+      x = x - 1;
+    }
   }
 
   void display() {
-    //stroke(0);
-    //fill(col);
-    //ellipse(x, y, diameter, diameter);
-
-    image(moon, x, y, diameter, diameter);
+    if (on == true) {
+      image(moon, x, y, diameter, diameter);
+    }
   }
 
   void top() {

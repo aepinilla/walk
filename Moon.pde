@@ -4,16 +4,21 @@ class Moon {
   float x;
   float y;
 
-  float diameter;
-  float speed;
-
   boolean on = false;
 
-  Moon(float tempD, float tempS) {
+  float diameter;
+  float constant;
+  float angle;
+  float scalar;
+  float speed;
+
+  Moon(float tempD, float tempC, float tempA, float tempSc, float tempS) {
     moon = loadImage("moon.png");
-    x = random(width);
-    y = height;
+
     diameter = tempD;
+    constant = tempC;
+    angle = tempA;
+    scalar = tempSc;
     speed = tempS;
   }
 
@@ -23,31 +28,22 @@ class Moon {
 
     on = true;
   }
-  
+
   void remove() {
     on = false;
   }
 
-  void ascend() {
+  void orbit() {
     if (on == true) {
-      y = y - speed;
-      x = x - 1;
+      x = mouseX + sin(angle-10) * scalar;
+      y = mouseY + cos(angle) * scalar;
+      angle = angle + speed;
     }
   }
 
   void display() {
     if (on == true) {
       image(moon, x, y, diameter, diameter);
-    }
-  }
-
-  void top() {
-    if (y < 0 - diameter) {
-      y = random(height);
-
-      if (x < 0 - diameter) {
-        x = random(width);
-      }
     }
   }
 }

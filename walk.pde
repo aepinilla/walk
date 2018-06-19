@@ -1,28 +1,26 @@
 Moon[] moons; // Declare array
-int numMoons = 20; // Declare number of moons
+int numMoons = 7; // Declare number of moons
 int currentMoon = 0; // Declare current moon
 
 PImage walk;
 
 void setup() {
   size(1024, 768);
-  walk = loadImage("walk2.jpg");
+  walk = loadImage("walk.jpg");
 
   moons = new Moon[numMoons]; // Create array
   for (int i = 0; i < moons.length; i++) {
-    moons[i] = new Moon(random(50, 100), random(2));
+    moons[i] = new Moon(random(50, 110), 300, 0.02, 325, 0.02);
   }
 }
 
 void draw() {
-  background(255);
   imageMode(CENTER);
   image(walk, width/2, height/2);
 
   for (int i = 0; i < moons.length; i++) {
-    moons[i].ascend();
+    moons[i].orbit();
     moons[i].display();
-    moons[i].top();
   }
 }
 
@@ -40,7 +38,6 @@ void keyPressed() {
     if (currentMoon != 0) {
       currentMoon--;
       moons[currentMoon].remove();
-      println(currentMoon);
     } else {
       currentMoon = moons.length;
     }

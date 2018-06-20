@@ -22,10 +22,7 @@ class Moon {
     speed = tempS;
   }
 
-  void start(float xpos, float ypos) {
-    x = xpos;
-    y = ypos;
-
+  void start() {
     on = true;
   }
 

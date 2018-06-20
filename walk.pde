@@ -6,7 +6,7 @@ PImage walk;
 
 void setup() {
   size(1024, 768);
-  walk = loadImage("walk.jpg");
+  walk = loadImage("walk2.jpg");
 
   moons = new Moon[numMoons]; // Create array
   for (int i = 0; i < moons.length; i++) {
@@ -16,7 +16,7 @@ void setup() {
 
 void draw() {
   imageMode(CENTER);
-  image(walk, width/2, height/2);
+  image(walk, width/2, height/2); 
 
   for (int i = 0; i < moons.length; i++) {
     moons[i].orbit();
@@ -25,8 +25,9 @@ void draw() {
 }
 
 void mousePressed() {
-  moons[currentMoon].start(mouseX, mouseY);
+  moons[currentMoon].start();
   currentMoon++;
+  image(walk, width/2, height/2);
 
   if (currentMoon >= numMoons) {
     currentMoon = 0;

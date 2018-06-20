@@ -7,7 +7,7 @@ This is a personal project where I experimented doing a photo montage of people 
 - If you press the space bar, a moon will be eliminated.
 
 ## Requirements
-You need to install Processing to run this : https://processing.org/download/
+You need to install Processing to run the files: https://processing.org/download/
 
 ## Technologies and tools used:
 - Photoshop

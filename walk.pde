@@ -6,7 +6,7 @@ PImage walk;
 
 void setup() {
   size(1024, 768);
-  walk = loadImage("walk2.jpg");
+  walk = loadImage("walk.jpg");
 
   moons = new Moon[numMoons]; // Create array
   for (int i = 0; i < moons.length; i++) {

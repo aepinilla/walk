@@ -3,8 +3,8 @@
 This is a personal project where I experimented doing a photo montage of people walking in a sky full of moons. Then, I used Processing to animate it.
 
 ## How does it work?
-- If you clic on in a new moon will be created (up to 7 moons).
-- If you press the space bar, a moon will be eliminated.
+- Clic and a new moon will be created (up to 7 moons).
+- Press the space bar and a moon will be eliminated.
 
 ## Requirements
 You need to install Processing to run the files: https://processing.org/download/

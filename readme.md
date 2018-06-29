@@ -1,3 +1,6 @@
+## 
+![alt text](https://github.com/nesard/walk/blob/master/data/walk.jpg)
+
 # Moon Walk
 
 This is a personal project where I experimented doing a photo montage of people walking in a sky full of moons. Then, I used Processing to animate it.
@@ -15,6 +18,3 @@ This is a personal project where I experimented doing a photo montage of people 
 ## Technologies and tools used:
 - Photoshop
 - Processing 3
-
-## 
-![alt text](https://github.com/nesard/walk/blob/master/data/walk.jpg)
